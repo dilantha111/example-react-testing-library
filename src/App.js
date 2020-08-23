@@ -14,8 +14,7 @@ function App() {
       const genres = await getMetalGenres();
       setGenreList(genres);
     } catch (error) {
-      console.error(error);
-      setError(error.message);
+      setError(error);
     } finally {
       setIsLoading(false);
     }
