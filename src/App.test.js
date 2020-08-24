@@ -25,8 +25,8 @@ describe("App component", () => {
     expect(await findByText(/loading/i)).toBeVisible();
     expect(getMetalGenres).toHaveBeenCalledTimes(1);
 
-    const topicElsText = getAllByRole('listitem').map(el => el.textContent.trim());
-    expect(topicElsText).toEqual(genreList);
+    const genreElsText = getAllByRole('listitem').map(el => el.textContent.trim());
+    expect(genreElsText).toEqual(genreList);
   });
 
   test("user can see an error message if failed to get a list of metal music genres", async () => {
